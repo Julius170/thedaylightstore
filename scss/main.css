@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+h1 {
+  font-size: 3.1rem;
+  line-height: 4rem;
+  color: #222;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 4.4rem;
+  color: #222;
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: #222;
+}
+
+p {
+  font-size: 1rem;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 2.2rem 4.5rem;
+}
+.section-m1 {
+  margin: 2.2rem 0;
+}
+
+body {
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 2.6rem;
+  background-color: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 99999;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+#header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header__navbar li {
+  list-style: none;
+  padding: 0 1.2rem;
+  position: relative;
+}
+#header__navbar li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+#header__navbar li a.active {
+  color: #088178;
+}
+#header__navbar li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 1.3rem;
+}
+#header__navbar li a:hover {
+  color: #088178;
+}
+#header__navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 1.3rem;
+}
+
+#hero {
+  background-image: url("../../img/hero4.png");
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0 5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#hero h4 {
+  padding-bottom: 0.96rem;
+}
+#hero h1 {
+  color: #088178;
+}
+#hero button {
+  background-image: url("../../img/button.png");
+  background-color: transparent;
+  color: #088178;
+  border: 0;
+  padding: 0.96rem 5.2rem 0.96rem 5.2rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.97rem;
+}
+
+#features {
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#features .fe-box {
+  width: 180px;
+  text-align: center;
+  padding: 1.7rem 1rem;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 1px solid #cce7d0;
+  border-radius: 4px;
+  margin: 0.98rem 0;
+}
+#features .fe-box:hover {
+  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+#features .fe-box h6 {
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color: #088178;
+  background-color: #fddde4;
+}
+#features .fe-box img {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}/*# sourceMappingURL=main.css.map */

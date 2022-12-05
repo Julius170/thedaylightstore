@@ -1,0 +1,30 @@
+#features{
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     flex-wrap: wrap;
+    .fe-box{
+        width: 180px;
+        text-align: center;
+        padding: 1.7rem 1rem;
+        box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+        border: 1px solid #cce7d0;
+        border-radius: 4px;
+        margin: .98rem 0;
+        &:hover{
+            box-shadow: 10px 10px 54px rgba(70, 62, 221, .1);
+        }
+        h6{
+            padding: 9px 8px 6px 8px;
+            line-height: 1;
+            border-radius: 4px;
+            color: $color-1;
+            background-color: #fddde4;
+        }
+        img{
+            width: 100%;
+            margin-bottom: .7rem;
+        }
+    }
+}
