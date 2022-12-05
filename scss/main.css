@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+button.normal {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.9rem 1.67rem;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +51,10 @@ p {
 
 body {
   width: 100%;
+}
+
+.section-p1 {
+  padding: 0 5rem;
 }
 
 #header {
@@ -126,7 +143,6 @@ body {
 }
 
 #features {
-  padding: 0 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -145,6 +161,7 @@ body {
   box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
 }
 #features .fe-box h6 {
+  display: inline-block;
   padding: 9px 8px 6px 8px;
   line-height: 1;
   border-radius: 4px;
@@ -154,4 +171,113 @@ body {
 #features .fe-box img {
   width: 100%;
   margin-bottom: 0.7rem;
+}
+#features .fe-box:nth-child(2) h6 {
+  background-color: #cdebbc;
+}
+#features .fe-box:nth-child(3) h6 {
+  background-color: #d1e8f2;
+}
+#features .fe-box:nth-child(4) h6 {
+  background-color: #cdd4f8;
+}
+#features .fe-box:nth-child(5) h6 {
+  background-color: #f6dbf6;
+}
+#features .fe-box:nth-child(6) h6 {
+  background-color: #fff2e5;
+}
+
+#product1 {
+  text-align: center;
+}
+#product1 .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  flex-wrap: wrap;
+}
+#product1 .pro {
+  width: 23%;
+  min-width: 16.4rem;
+  padding: 0.67rem 0.78rem;
+  border: 1px solid #cce7d0;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 0.96rem 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+#product1 .pro img {
+  width: 100%;
+  border-radius: 1.4rem;
+}
+#product1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.07);
+}
+#product1 .pro .cart {
+  width: 2.3rem;
+  height: 2.3rem;
+  line-height: 2.3rem;
+  border-radius: 3rem;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 1.3rem;
+  right: 0.67rem;
+}
+#product1 .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+#product1 .pro .des span {
+  color: #606063;
+  font-size: 0.71rem;
+}
+#product1 .pro .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 0.92rem;
+}
+#product1 .pro .des i {
+  font-size: 0.8rem;
+  color: rgb(243, 181, 25);
+}
+#product1 .pro .des h4 {
+  padding-top: 0.5rem;
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #088178;
+}
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../img/banner/b2.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+#banner h4 {
+  color: #fff;
+  font-size: 1rem;
+}
+#banner h2 {
+  color: #fff;
+  font-size: 1.7rem;
+  padding: 10px 0;
+}
+#banner h2 span {
+  color: #ef3636;
+}
+#banner button:hover {
+  background: #088178;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

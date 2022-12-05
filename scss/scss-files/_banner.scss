@@ -1,0 +1,28 @@
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("../../img/banner/b2.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    h4{
+        color: #fff;
+        font-size: 1rem;
+    }
+    h2{
+        color: #fff;
+        font-size: 1.7rem;
+        padding: 10px 0;
+        span{
+            color: #ef3636;
+        }
+    }
+    button:hover{
+        background: $color-1;
+        color: #fff;
+    }
+}
