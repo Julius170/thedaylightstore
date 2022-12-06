@@ -1,0 +1,61 @@
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .col{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1.35rem;
+        a:hover{
+            color: $color-1;
+        }
+    }
+    .logo{
+        margin-bottom: 1.8rem;
+    }
+    h4{
+        font-size: .92rem;
+        margin-bottom: 1.37rem;
+    }
+    p{
+        font-size: .92rem;
+        margin: 0 0 .5rem 0;
+    }
+    a{
+        font-size: .92rem;
+        text-decoration: none;
+        color: #222;
+        margin-bottom: .67rem;
+        & a:hover{
+            color: $color-1;
+        }
+    }
+    .follow{
+        margin-top: 1.37rem;
+        & i{
+            color: #465b46;
+            padding-right: 4px;
+            cursor: pointer;
+        }
+        .install {
+            .row{
+                .img{
+                    border: 1px solid #088178;
+                    border-radius: 6px;
+                }
+            }
+            .img{
+                margin: 10px 0 15px 0;
+            }
+        }
+        .follow {
+            i:hover{
+                color: $color-1;
+            }
+        }
+
+    }
+    
+}
+

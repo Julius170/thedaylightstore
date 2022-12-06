@@ -23,6 +23,87 @@
     }
     button:hover{
         background: $color-1;
+        color:#fff;
+    }
+}
+
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    .banner-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("../../img/banner/b17.jpg");
+        min-width: 500px;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        padding: 1.8rem;
+        &:hover{
+            button{
+                background: $color-1;
+                border: 1px solid $color-1;
+            }
+        }
+    }
+    .banner-box2{
+        background-image: url(../../img/banner/b10.jpg);
+    }
+    h4{
         color: #fff;
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+    h2{
+        color: #fff;
+        font-size: 1.7rem;
+        font-weight: 800;
+    }
+    span{
+        color: #fff;
+        font-size: .96rem;
+        font-weight: 500;
+    }
+    
+}
+
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 5.05rem;
+    .banner-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("../../img/banner/b7.jpg");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 1.8rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .banner-box2{
+        background-image: url("../../img/banner/b4.jpg");
+    }
+    .banner-box3{
+        background-image: url("../../img/banner/b18.jpg");
+    }
+    h2{
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 1.2rem;  
+    }
+    h3{
+        color: #ec544e;
+      font-weight: 900;
+      font-size: .94rem;  
     }
 }
