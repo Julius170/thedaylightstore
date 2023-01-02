@@ -1,0 +1,42 @@
+#hero{
+    background-image: url("../img/hero4.png");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    
+    display: flex;
+    
+    justify-content: center;
+    flex-direction: column;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+
+    h1{
+        color: $color-1;
+        animation: moveInLeft 1.5s;
+    }
+    h2{
+        animation: moveInRight 1.3s;
+    }
+    h4{
+        animation: moveInLeft 1s;
+    }
+    button{
+        animation: moveInRight 1.7s;
+        background-image: url('../img/button.png');
+        background-color: transparent;
+        color: $color-1;
+        border: 0;
+        padding:  .96rem 5.2rem .96rem 5.2rem;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: .97rem;
+        transition: .18s;
+        &:active{
+            transform: scale(1.2);
+        }
+        }
+       
+}

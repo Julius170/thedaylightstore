@@ -2,7 +2,7 @@
     text-align: center;
     .pro-container{
         display: flex;
-        justify-content: space-between;
+        
         padding-top: 1.25rem;
         flex-wrap: wrap;
     }
@@ -14,10 +14,12 @@
         border-radius: 2rem;
         cursor: pointer;
         box-shadow: 20px 20px 30px rgba(0, 0,0, .02);
-        margin: .96rem 0;
+        margin-top: .96rem;
+        margin-bottom: .96rem;
         transition: .2s ease;
         position: relative;
-
+        margin-left: .96rem;
+        transition: width 1s;
         img{
             width: 100%;
             border-radius: 1.4rem;
@@ -25,6 +27,7 @@
         }
         &:hover{
             box-shadow: 20px 20px 30px rgba(0, 0,0, .07);
+            width: 24%;
         }
         .cart{
             width: 2.3rem;
