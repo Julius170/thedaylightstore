@@ -1,6 +1,6 @@
-import "./products.styles.scss";
 
-const Products = () => {
+
+const Product = () => {
   return (
     <section id="product1" class="section-p1">
       <h2>Featured Products</h2>
@@ -105,4 +105,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Product;

@@ -1,6 +1,11 @@
-import "./navigation.styles.scss";
+import { useState } from "react";
+
 
 const Navigation = () => {
+  const [openNavbar, setOpenNavBar] = useState('')
+  const toggleNavbar = () => {
+    setOpenNavBar((prev) => prev === ''? 'show': '')
+  }
   return (
     <section id="header">
       <a href="#" id="header__logo">
@@ -8,7 +13,7 @@ const Navigation = () => {
       </a>
 
       <div>
-        <ul id="header__navbar" class="">
+        <ul id="header__navbar" class={openNavbar}>
           <li class="navbar_links">
             <a href="./" class="active">
               Home
@@ -36,7 +41,7 @@ const Navigation = () => {
 
       <div id="mobile">
         <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-        <i id="bar" class="fa-solid fa-bars"></i>
+        <i id="bar" class="fa-solid fa-bars" onClick={toggleNavbar}></i>
       </div>
     </section>
   );

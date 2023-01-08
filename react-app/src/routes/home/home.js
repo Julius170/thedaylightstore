@@ -1,7 +1,12 @@
 import { Fragment } from "react";
+import Banner from "../../components/banner/banner.component";
+import SmallBanner from "../../components/banner/smallBanner.component";
 import Features from "../../components/features/features.component";
-import Products from "../../components/products/products.component";
-import "./home.styles.scss";
+import Footer from "../../components/footer/footer.component";
+import Newsletter from "../../components/newsletter/newsletter.component";
+import Product from "../../components/products/product.component";
+import Product1 from "../../components/products/product1.component";
+
 
 const Home = () => {
   return (
@@ -16,7 +21,12 @@ const Home = () => {
         </button>
       </section>
       <Features />
-      <Products/>
+      <Product/>
+      <Banner/>
+      <Product1/>
+      <SmallBanner/>
+      <Newsletter/>
+      <Footer/>
     </Fragment>
   );
 };

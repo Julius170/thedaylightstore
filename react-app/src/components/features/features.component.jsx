@@ -1,5 +1,5 @@
 import React from "react";
-import './features.styles.scss'
+
 const Features = () => {
   return (
     <section id="features" class="section-p1">
