@@ -10,7 +10,7 @@
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: #E3E6F3;
+    background-color: #e3e6f3;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 5.01rem 0 0 0.67rem;
     transition: 0.3s;
@@ -78,10 +78,10 @@
     min-width: 100%;
   }
   .section-p1 {
-    padding: 0 0rem;
+    padding: 2rem 0.5rem;
   }
   #newsletter {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
   }
   #newsletter .form {
     width: 90%;
@@ -154,7 +154,7 @@
     padding-bottom: 0.96rem;
   }
   #features {
-    justify-content: space-between;
+    justify-content: center;
   }
   .section-p1 {
     padding: 0 5rem;
@@ -189,6 +189,7 @@
   #hero h4 {
     font-size: 1.85rem;
   }
+  
 }
 button.normal {
   font-size: 0.9rem;
@@ -362,7 +363,7 @@ body {
   font-size: 2.2rem;
   color: rgba(1, 1, 1, 0.678);
   -webkit-animation: colorRiot 13s infinite;
-          animation: colorRiot 13s infinite;
+  animation: colorRiot 13s infinite;
 }
 
 #hero {
@@ -379,19 +380,19 @@ body {
 #hero h1 {
   color: #088178;
   -webkit-animation: moveInLeft 1.5s;
-          animation: moveInLeft 1.5s;
+  animation: moveInLeft 1.5s;
 }
 #hero h2 {
   -webkit-animation: moveInRight 1.3s;
-          animation: moveInRight 1.3s;
+  animation: moveInRight 1.3s;
 }
 #hero h4 {
   -webkit-animation: moveInLeft 1s;
-          animation: moveInLeft 1s;
+  animation: moveInLeft 1s;
 }
 #hero button {
   -webkit-animation: moveInRight 1.7s;
-          animation: moveInRight 1.7s;
+  animation: moveInRight 1.7s;
   /* background-image: url("../img/button.png"); */
   background-color: transparent;
   color: #088178;
@@ -410,6 +411,7 @@ body {
 #features {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 #features .fe-box {
@@ -526,6 +528,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+
   /* background-image: url("../img/banner/b2.jpg"); */
   width: 100%;
   height: 40vh;
@@ -595,7 +598,7 @@ body {
   /* background-image: url("../../img/banner/b14.png"); */
   background-repeat: no-repeat;
   background-position: 20% 30%;
-  background-color: #041E42;
+  background-color: #041e42;
 }
 #newsletter h4 {
   font-weight: 700;
@@ -678,7 +681,6 @@ footer .follow .install .img {
 footer .follow .follow i:hover {
   color: #088178;
 }
-
 
 #newsletter.newsletter-shop #shop-form {
   display: flex;
@@ -802,4 +804,4 @@ footer .follow .follow i:hover {
     bottom: 0.9%;
     padding: 1.04rem 2rem;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

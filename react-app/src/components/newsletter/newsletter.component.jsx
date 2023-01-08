@@ -5,7 +5,7 @@ const Newsletter = () => {
         <h4>Sign Up Newsletters</h4>
         <p>
           Get E-mail updates about our latest shop and
-          <span>special offers.</span>
+          <span> special offers.</span>
         </p>
       </div>
       <div class="form">

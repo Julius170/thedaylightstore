@@ -25,9 +25,7 @@ const Navigation = () => {
           <li class="navbar_links">
             <a href="blog">login</a>
           </li>
-          <li class="navbar_links">
-            <a href="about">about</a>
-          </li>
+          
           <li class="navbar_links">
             <a href="contact">contact</a>
           </li>
