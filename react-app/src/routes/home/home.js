@@ -21,7 +21,7 @@ const Home = () => {
         </button>
       </section>
       <Features />
-      <Product/>
+      <Product />
       <Banner/>
       <Product1/>
       <SmallBanner/>
