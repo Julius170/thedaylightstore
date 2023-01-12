@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer class="section-p1 section-m1">
+    <footer  class="section-p1">
       <div class="col">
         <img class="logo" src="./img/logo.png" alt="" />
         <h4>Contact</h4>
@@ -28,8 +28,8 @@ const Footer = () => {
         <a href="">Contact Us</a>
       </div>
 
-      <div class="col">
-        <h4>My Account</h4>
+      <div  class="col">
+        <h4 >My Account</h4>
         <a href="">Sign in</a>
         <a href="">View Cort</a>
         <a href="">My Wishlist</a>

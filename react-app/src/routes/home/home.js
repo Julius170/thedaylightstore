@@ -25,7 +25,7 @@ const Home = () => {
       <Banner/>
       <Product1/>
       <SmallBanner/>
-      <Newsletter/>
+      
       <Footer/>
     </Fragment>
   );

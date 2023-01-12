@@ -1,27 +1,28 @@
 import React from "react";
+import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
 
-function ProductItem({image, price, name, group}) {
+function ProductItem({ image, price, name, group }) {
   return (
-    
-      <div className="pro">
-        <img src={image} alt="" srcset="" />
-        <div className="des">
-          <span>{group}</span>
-          <h5>{name}</h5>
-          <div className="star">
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-          </div>
-          <h4>${price}</h4>
+    <div className="pro">
+      <img src={image} alt="" srcset="" />
+
+      <div className="des">
+        <span>{group}</span>
+        <h5>{name}</h5>
+        <div className="star">
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
         </div>
-        <a href="#">
-          <i className="fal fa-shopping-cart cart"></i>
-        </a>
+        <h4>${price}</h4>
       </div>
-    
+
+      <div className="cart">
+        <i class="fa-sharp fa-solid fa-cart-shopping "></i>
+      </div>
+    </div>
   );
 }
 
