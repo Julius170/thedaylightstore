@@ -15,7 +15,7 @@ const defaultFormFields = {
   password: '',
 };
 
-const SignInForm = () => {
+const SignInForm = ({styleButton}) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -44,6 +44,7 @@ const SignInForm = () => {
     setFormFields({ ...formFields, [name]: value });
   };
 
+  
   return (
     <div className='sign-in-container'>
       <h2>Already have an account?</h2>
@@ -67,10 +68,10 @@ const SignInForm = () => {
           value={password}
         />
         <div className='buttons-container'>
-          <Button type='submit'>Sign In</Button>
-          <Button buttonType='google' type='button' onClick={signInWithGoogle}>
+          <Button type='submit' style={styleButton} className="normal">Sign In</Button>
+          <button  type='button' style={styleButton} className='normal' onClick={signInWithGoogle}>
             Sign In With Google
-          </Button>
+          </button>
         </div>
       </form>
     </div>

@@ -7,7 +7,6 @@ import Newsletter from "../../components/newsletter/newsletter.component";
 import Product from "../../components/products/product.component";
 import Product1 from "../../components/products/product1.component";
 
-
 const Home = () => {
   return (
     <Fragment>
@@ -22,11 +21,9 @@ const Home = () => {
       </section>
       <Features />
       <Product />
-      <Banner/>
-      <Product1/>
-      <SmallBanner/>
-      
-      <Footer/>
+      <Banner />
+      <Product1 />
+      <SmallBanner />
     </Fragment>
   );
 };

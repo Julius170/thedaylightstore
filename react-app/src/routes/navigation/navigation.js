@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import Footer from "../../components/footer/footer.component";
 import { UserContext } from "../../contexts/user.context";
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
@@ -56,6 +57,7 @@ const Navigation = () => {
         </div>
       </section>
       <Outlet />
+      <Footer/>
     </>
   );
 };

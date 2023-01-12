@@ -201,7 +201,10 @@ button.normal {
   cursor: pointer;
   border: none;
   outline: none;
-  transition: 0.2s;
+  
+}
+button.normal:active{
+  transform: scale(1.03);
 }
 button.white {
   font-size: 0.86rem;

@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/footer.component";
 import Authentication from "./routes/authentication/authentication.component";
 import Home from "./routes/home/home";
 import Navigation from "./routes/navigation/navigation";
@@ -12,8 +13,11 @@ function App() {
           <Route index element={<Home />} />
           <Route path="shop" element={<Shop />} />
           <Route path="login" element={<Authentication />} />
+          
         </Route>
+        
       </Routes>
+      
     </div>
   );
 }
