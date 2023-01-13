@@ -17,11 +17,12 @@ const Product = () => {
           return <ProductItem
             key={id}
             image={imageUrl}
-            price="79"
-            name="Cartoon Astronaut T-Shirts"
+            price={price}
+            name={name}
             group="shirts"
           />
         })}
+        
       </div>
     </section>
   );
