@@ -4,7 +4,7 @@ import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
 function ProductItem({ image, price, name, group }) {
   return (
     <div className="pro">
-      <img src={image} alt="" srcset="" />
+      <img src={image} alt="" srcset="" style={{ width: "14rem" }} />
 
       <div className="des">
         <span>{group}</span>
