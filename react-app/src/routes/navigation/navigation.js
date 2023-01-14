@@ -1,5 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+import CartIcon from "../../components/cart-icon/cart-icon.component";
 import Footer from "../../components/footer/footer.component";
 import { UserContext } from "../../contexts/user.context";
 import { signOutUser } from '../../utils/firebase/firebase.utils';
@@ -45,10 +47,13 @@ const Navigation = () => {
             </li>
             <li>
               <Link>
-                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                {false && <i class="fa-sharp fa-solid fa-cart-shopping"></i>}
+                <CartIcon/>
               </Link>
             </li>
+            
           </ul>
+          
         </div>
 
         <div id="mobile">
@@ -56,6 +61,7 @@ const Navigation = () => {
           <i id="bar" class="fa-solid fa-bars" onClick={toggleNavbar}></i>
         </div>
       </section>
+      <CartDropdown/>
       <Outlet />
       <Footer/>
     </>
