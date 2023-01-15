@@ -4,7 +4,7 @@ import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import Footer from "../../components/footer/footer.component";
 import { UserContext } from "../../contexts/user.context";
-import { signOutUser } from '../../utils/firebase/firebase.utils';
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 const Navigation = () => {
   const [openNavbar, setOpenNavBar] = useState("");
@@ -33,12 +33,12 @@ const Navigation = () => {
               <Link to="/shop">shop</Link>
             </li>
             <li class="navbar_links">
-            <Link to="/login">
-              {currentUser ? (
-                <span onClick={signOutUser}>logout</span>
-              ) : (
-                <span>login</span> 
-              )}
+              <Link to="/login">
+                {currentUser ? (
+                  <span onClick={signOutUser}>logout</span>
+                ) : (
+                  <span>login</span>
+                )}
               </Link>
             </li>
 
@@ -48,12 +48,10 @@ const Navigation = () => {
             <li>
               <Link>
                 {false && <i class="fa-sharp fa-solid fa-cart-shopping"></i>}
-                <CartIcon/>
+                <CartIcon />
               </Link>
             </li>
-            
           </ul>
-          
         </div>
 
         <div id="mobile">
@@ -61,9 +59,9 @@ const Navigation = () => {
           <i id="bar" class="fa-solid fa-bars" onClick={toggleNavbar}></i>
         </div>
       </section>
-      <CartDropdown/>
+      <CartDropdown />
       <Outlet />
-      <Footer/>
+      <Footer />
     </>
   );
 };

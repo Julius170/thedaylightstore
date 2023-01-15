@@ -201,7 +201,6 @@ button.normal {
   cursor: pointer;
   border: none;
   outline: none;
-  
 }
 button.normal:active{
   transform: scale(1.03);

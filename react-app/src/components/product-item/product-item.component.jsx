@@ -1,10 +1,15 @@
 import React from "react";
-import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/cart.context";
+import './product-item.styles.scss'
 
-function ProductItem({ image, price, name, group }) {
+function ProductItem({ group , product}) {
+  const {addItemToCart} = useContext(CartContext)
+  const {imageUrl, price, name} = product
+  const addProductToCart = () => addItemToCart(product)
   return (
     <div className="pro">
-      <img src={image} alt="" srcset="" style={{ width: "14rem" }} />
+      <img src={imageUrl} alt="" srcset="" style={{ width: "14rem" }} />
 
       <div className="des">
         <span>{group}</span>
@@ -19,7 +24,7 @@ function ProductItem({ image, price, name, group }) {
         <h4>${price}</h4>
       </div>
 
-      <div className="cart">
+      <div className="cart" onClick={addProductToCart}>
         <i class="fa-sharp fa-solid fa-cart-shopping "></i>
       </div>
     </div>
