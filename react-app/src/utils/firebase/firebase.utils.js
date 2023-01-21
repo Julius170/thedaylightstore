@@ -19,6 +19,7 @@ import {
   query,
   getDocs,
   addDoc,
+  updateDoc
 } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -123,4 +124,12 @@ export const signOutUser = async () => await signOut(auth);
 export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
 
+// export const addDocumentToExistingDocumentInFirebase = () => {
+//   const docRef = doc(db, 'categories', 'hats')
 
+//   updateDoc(docRef, {
+//     title: 'hats'
+//   }).then(() => {
+//     console.log('done updating')
+//   })
+// }
