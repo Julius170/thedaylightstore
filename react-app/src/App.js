@@ -7,6 +7,7 @@ import Navigation from "./routes/navigation/navigation";
 import Shop from "./routes/shop/shop";
 
 function App() {
+  // tryAndAddADocument()
   return (
     <div className="App">
       <Routes>
@@ -15,11 +16,8 @@ function App() {
           <Route path="shop" element={<Shop />} />
           <Route path="login" element={<Authentication />} />
           <Route path="checkout" element={<Checkout />} />
-          
         </Route>
-        
       </Routes>
-      
     </div>
   );
 }

@@ -33,6 +33,8 @@ const CheckoutItem = ({ cartItem }) => {
       <div className='remove-button' onClick={clearItemHandler}>
         &#10005;
       </div>
+
+      
     </div>
   );
 };

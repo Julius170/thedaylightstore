@@ -124,9 +124,3 @@ export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
 
 
-  export const tryAndAddADocument = async () => {
-    const collectionRef = collection(db, 'categories');
-    await addDoc(collectionRef, {
-      "kwjui": 12
-    })
-  }
