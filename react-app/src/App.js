@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/footer.component";
+import { Admin } from "./routes/admin/addProduct";
 import Authentication from "./routes/authentication/authentication.component";
 import Checkout from "./routes/checkout/checkout.component";
 import Home from "./routes/home/home";
@@ -16,6 +17,7 @@ function App() {
           <Route path="shop" element={<Shop />} />
           <Route path="login" element={<Authentication />} />
           <Route path="checkout" element={<Checkout />} />
+          <Route path="admin" element={<Admin />} />
         </Route>
       </Routes>
     </div>

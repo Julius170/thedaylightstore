@@ -20,7 +20,7 @@ export const CategoriesProvider = ({ children }) => {
       console.log(categoryMap);
       setCategoriesMap(categoryMap);
     };
-    // addDocumentToExistingDocumentInFirebase()
+    addDocumentToExistingDocumentInFirebase()
 
     getCategoriesMap();
   }, []);

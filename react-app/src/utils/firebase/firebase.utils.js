@@ -58,6 +58,7 @@ export const addCollectionAndDocuments = async (
   objectsToAdd.forEach((object) => {
     const docRef = doc(collectionRef, object.title.toLowerCase());
     batch.set(docRef, object);
+    
   });
 
   await batch.commit();
@@ -71,7 +72,7 @@ export const getCategoriesAndDocuments = async () => {
   const querySnapshot = await getDocs(q);
   const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
     const { title, items } = docSnapshot.data();
-    acc[title.toLowerCase()] = items;
+    acc[title?.toLowerCase()] = items;
     return acc;
   }, {});
 
@@ -124,12 +125,16 @@ export const signOutUser = async () => await signOut(auth);
 export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
 
-// export const addDocumentToExistingDocumentInFirebase = () => {
-//   const docRef = doc(db, 'categories', 'hats')
+export const addDocumentToExistingDocumentInFirebase = () => {
+  const docRef = doc(db, 'categories', 'pig')
 
-//   updateDoc(docRef, {
-//     title: 'hats'
-//   }).then(() => {
-//     console.log('done updating')
-//   })
-// }
+  // updateDoc(docRef, {
+  //   title: 'hats'
+  // }).then(() => {
+  //   console.log('done updating')
+  // })
+
+    setDoc(docRef,{
+      title: 'pig'
+    })
+}
