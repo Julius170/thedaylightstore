@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/footer.component";
-import { Admin } from "./routes/admin/addProduct";
+import { Admin } from "./routes/admin/Admin";
 import Authentication from "./routes/authentication/authentication.component";
 import Checkout from "./routes/checkout/checkout.component";
 import Home from "./routes/home/home";

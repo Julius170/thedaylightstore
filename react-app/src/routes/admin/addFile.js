@@ -1,22 +1,19 @@
-import { Fragment, useEffect, useState } from "react";
-import Footer from "../../components/footer/footer.component";
+import React from "react";
+import Button from "../../components/button/button.component";
 import FormInput from "../../components/login/form-input/form-input.component";
 import { styleButton } from "../authentication/authentication.component";
-import Navigation from "../navigation/navigation";
-import Button from "../../components/button/button.component";
-import './addProduct.styles.scss'
 
-export const Admin = () => {
+function Addfile() {
   return (
     <div className="add-product-to-cart">
       <h2>Add new product</h2>
       <span>Sign in with your email and password</span>
-      <form >
+      <form>
         <FormInput
           label="productName"
           type="text"
           required
-          onChange={()=>{}}
+          onChange={() => {}}
           name="productName"
           value=""
         />
@@ -25,7 +22,7 @@ export const Admin = () => {
           label="productImage"
           type="text"
           required
-          onChange={()=>{}}
+          onChange={() => {}}
           name="productImage"
           value=""
         />
@@ -34,7 +31,7 @@ export const Admin = () => {
           label="productPrice"
           type="text"
           required
-          onChange={()=>{}}
+          onChange={() => {}}
           name="productPrice"
           value=""
         />
@@ -43,7 +40,7 @@ export const Admin = () => {
           label="productName"
           type="text"
           required
-          onChange={()=>{}}
+          onChange={() => {}}
           name="productName"
           value=""
         />
@@ -52,9 +49,10 @@ export const Admin = () => {
           <Button type="submit" style={styleButton} className="normal">
             Sign In
           </Button>
-   
         </div>
       </form>
     </div>
   );
-};
+}
+
+export default Addfile;
