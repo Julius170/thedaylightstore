@@ -6,9 +6,11 @@ import Checkout from "./routes/checkout/checkout.component";
 import Home from "./routes/home/home";
 import Navigation from "./routes/navigation/navigation";
 import Shop from "./routes/shop/shop";
+import { addDocumentToExistingDocumentInFirebase } from "./utils/firebase/firebase.utils";
 
 function App() {
   // tryAndAddADocument()
+
   return (
     <div className="App">
       <Routes>

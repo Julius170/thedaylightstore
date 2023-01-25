@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from "firebase/app";
 import {
   getAuth,
   signInWithRedirect,
@@ -8,7 +8,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
-} from 'firebase/auth';
+} from "firebase/auth";
 import {
   getFirestore,
   doc,
@@ -19,8 +19,8 @@ import {
   query,
   getDocs,
   addDoc,
-  updateDoc
-} from 'firebase/firestore';
+  updateDoc,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDLqF47sS8H9DPomhwYlu693OOAgP8VhuM",
@@ -36,7 +36,7 @@ const firebaseApp = initializeApp(firebaseConfig);
 const googleProvider = new GoogleAuthProvider();
 
 googleProvider.setCustomParameters({
-  prompt: 'select_account',
+  prompt: "select_account",
 });
 
 export const auth = getAuth();
@@ -58,15 +58,14 @@ export const addCollectionAndDocuments = async (
   objectsToAdd.forEach((object) => {
     const docRef = doc(collectionRef, object.title.toLowerCase());
     batch.set(docRef, object);
-    
   });
 
   await batch.commit();
-  console.log('done');
+  console.log("done");
 };
 
 export const getCategoriesAndDocuments = async () => {
-  const collectionRef = collection(db, 'categories');
+  const collectionRef = collection(db, "categories");
   const q = query(collectionRef);
 
   const querySnapshot = await getDocs(q);
@@ -85,7 +84,7 @@ export const createUserDocumentFromAuth = async (
 ) => {
   if (!userAuth) return;
 
-  const userDocRef = doc(db, 'users', userAuth.uid);
+  const userDocRef = doc(db, "users", userAuth.uid);
 
   const userSnapshot = await getDoc(userDocRef);
 
@@ -101,7 +100,7 @@ export const createUserDocumentFromAuth = async (
         ...additionalInformation,
       });
     } catch (error) {
-      console.log('error creating the user', error.message);
+      console.log("error creating the user", error.message);
     }
   }
 
@@ -125,8 +124,51 @@ export const signOutUser = async () => await signOut(auth);
 export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
 
-export const addDocumentToExistingDocumentInFirebase = () => {
-  const docRef = doc(db, 'categories', 'pig')
+export const addDocumentToExistingDocumentInFirebase = async (
+  productCategory = "hats",
+  productToAdd
+) => {
+  // chech if the document exists in firebase already
+  const docRef = doc(db, "categories", productCategory);
+  const document = await getDoc(docRef);
+  // if yes
+  if (document.exists()) {
+    let data = document.data();
+    let { items } = data;
+    let lengthOfData = items.length;
+    productToAdd["id"] = lengthOfData;
+    items.push(productToAdd);
+
+    if (productToAdd.id) {
+      await setDoc(doc(db, "categories", productCategory), {
+        ...{
+          ...data,
+          items: items,
+        },
+        title: productCategory,
+      });
+    }
+  } else if (!document.exists()) {
+    await setDoc(doc(db, "categories", productCategory), {
+      items: [{ ...productToAdd, id: 1 }],
+      title: productCategory,
+    });
+  }
+  // await console.log((await getDoc(docRef)).data() ,"test")
+
+  // get the data from the document
+  // update the array
+  // await setDoc(doc(db, "categories", "hats"), {
+  //   name: "Los Angeles",
+  //   state: "CA",
+  //   country: "USA"
+  // });
+
+  // if no
+  // setDoc(docRef,{
+  //  items: [push the object that wants to be added into this]
+  //   title: 'pig' (any title)
+  // })
 
   // updateDoc(docRef, {
   //   title: 'hats'
@@ -134,7 +176,14 @@ export const addDocumentToExistingDocumentInFirebase = () => {
   //   console.log('done updating')
   // })
 
-    // setDoc(docRef,{
-    //   title: 'pig'
-    // })
-}
+  // setDoc(docRef,{
+  //   title: 'pig'
+  // })
+};
+
+addDocumentToExistingDocumentInFirebase("fish", {
+
+  name: "oil and milk",
+  imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
+  price: 25,
+});
