@@ -1,21 +1,23 @@
-import { useState } from 'react';
-
-import FormInput from '../form-input/form-input.component';
-import Button from '../../button/button.component';
-
+import { useState } from "react";
+import FormInput from "../form-input/form-input.component";
+// import Button from "../../button/button.component";
 import {
   signInAuthUserWithEmailAndPassword,
   signInWithGooglePopup,
-} from '../../../utils/firebase/firebase.utils';
+} from "../../../utils/firebase/firebase.utils";
+import "./sign-in-form.styles.scss";
 
-import './sign-in-form.styles.scss';
+import Button from "@mui/material/Button";
+
 
 const defaultFormFields = {
-  email: '',
-  password: '',
+  email: "",
+  password: "",
 };
 
-const SignInForm = ({styleButton}) => {
+
+
+const SignInForm = ({ styleButton }) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -34,7 +36,7 @@ const SignInForm = ({styleButton}) => {
       await signInAuthUserWithEmailAndPassword(email, password);
       resetFormFields();
     } catch (error) {
-      console.log('user sign in failed', error);
+      console.log("user sign in failed", error);
     }
   };
 
@@ -44,34 +46,40 @@ const SignInForm = ({styleButton}) => {
     setFormFields({ ...formFields, [name]: value });
   };
 
-  
   return (
-    <div className='sign-in-container'>
+    <div className="sign-in-container">
       <h2>Already have an account?</h2>
       <span>Sign in with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
-          label='Email'
-          type='email'
+          label="Email"
+          type="email"
           required
           onChange={handleChange}
-          name='email'
+          name="email"
           value={email}
         />
 
         <FormInput
-          label='Password'
-          type='password'
+          label="Password"
+          type="password"
           required
           onChange={handleChange}
-          name='password'
+          name="password"
           value={password}
         />
-        <div className='buttons-container'>
-          <Button type='submit' style={styleButton} className="normal">Sign In</Button>
-          <button  type='button' style={styleButton} className='normal' onClick={signInWithGoogle}>
+        <div className="buttons-container">
+          <Button type="submit" style={styleButton} className="normal">
+            Sign In
+          </Button>
+          <Button
+            type="button"
+            style={styleButton}
+            className="normal"
+            onClick={signInWithGoogle}
+          >
             Sign In With Google
-          </button>
+          </Button>
         </div>
       </form>
     </div>

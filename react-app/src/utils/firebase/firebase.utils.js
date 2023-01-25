@@ -134,7 +134,7 @@ export const addDocumentToExistingDocumentInFirebase = () => {
   //   console.log('done updating')
   // })
 
-    setDoc(docRef,{
-      title: 'pig'
-    })
+    // setDoc(docRef,{
+    //   title: 'pig'
+    // })
 }

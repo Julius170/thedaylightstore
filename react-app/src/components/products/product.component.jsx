@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { CategoriesContext } from "../../contexts/categories.context";
 
 const Product = () => {
-  let array = [1, 2, 3, 4, 5, 6, 7];
   const { categoriesMap } = useContext(CategoriesContext);
   console.log(categoriesMap, "this is it guys");
   const { hats, jackets, mens, women, sneakers } = categoriesMap;
