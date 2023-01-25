@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../components/button/button.component";
 import FormInput from "../../components/login/form-input/form-input.component";
 import { styleButton } from "../authentication/authentication.component";
 
+const addProductHandler = {
+  productName: '',
+  productImage: '',
+  productPrice: '',
+  groupName: '',
+}
+
 function Addfile() {
+  const [addProduct, setAddProduct] = useState(addProductHandler)
+  const {productName, productImage, productPrice, groupName} = addProduct
+
+  const handleChange = (event) => {
+    const {name, value} = event.target
+
+    setAddProduct(prev => ({...prev, [name]: value})) 
+    console.log(addProduct)
+  }
   return (
     <div className="add-product-to-cart">
       <h2>Add new product</h2>
@@ -13,41 +29,41 @@ function Addfile() {
           label="productName"
           type="text"
           required
-          onChange={() => {}}
+          onChange={handleChange}
           name="productName"
-          value=""
+          value={productName}
         />
 
         <FormInput
           label="productImage"
           type="text"
           required
-          onChange={() => {}}
+          onChange={handleChange}
           name="productImage"
-          value=""
+          value={productImage}
         />
 
         <FormInput
           label="productPrice"
           type="text"
           required
-          onChange={() => {}}
+          onChange={handleChange}
           name="productPrice"
-          value=""
+          value={productPrice}
         />
 
         <FormInput
-          label="productName"
+          label="groupName"
           type="text"
           required
-          onChange={() => {}}
-          name="productName"
-          value=""
+          onChange={handleChange}
+          name="groupName"
+          value={groupName}
         />
 
         <div className="buttons-container">
           <Button type="submit" style={styleButton} className="normal">
-            Sign In
+            Add Product
           </Button>
         </div>
       </form>

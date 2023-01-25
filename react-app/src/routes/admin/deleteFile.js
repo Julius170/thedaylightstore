@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Button from "../../components/button/button.component";
 import FormInput from "../../components/login/form-input/form-input.component";
 import { styleButton } from "../authentication/authentication.component";
+import { Button } from "@mui/material";
 
 const defaultFormFields = {
   productName: "",
@@ -42,7 +42,7 @@ function DeleteFile() {
 
         <div className="buttons-container">
           <Button type="submit" style={styleButton} className="normal">
-            Sign In
+          delete Product
           </Button>
         </div>
       </form>
