@@ -182,8 +182,38 @@ export const addDocumentToExistingDocumentInFirebase = async (
 };
 
 addDocumentToExistingDocumentInFirebase("fish", {
-
   name: "oil and milk",
   imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
   price: 25,
 });
+
+export const deleteDocumentToExistingDocumentInFirebase = async (
+  productCategory = "hats",
+  productToDelete
+  // product to delete is an object
+) => {
+  // chech if the document exists in firebase already
+  const docRef = doc(db, "categories", productCategory);
+  const document = await getDoc(docRef);
+  // if yes
+  if (document.exists()) {
+    let data = document.data();
+    let { items } = data;
+    let lengthOfData = items.length;
+
+    // delete items and store in a variable
+
+    // update items to that variable
+  } else if (!document.exists()) {
+    console.log("document does not exist");
+  }
+
+
+  // updateDoc(docRef, {
+  //   title: 'hats'
+  // }).then(() => {
+  //   console.log('done updating')
+  // })
+
+ 
+};
