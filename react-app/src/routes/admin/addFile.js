@@ -14,6 +14,9 @@ const addProductHandler = {
 function Addfile() {
   const [addProduct, setAddProduct] = useState(addProductHandler);
   const { productName, productImage, productPrice, groupName } = addProduct;
+  const resetFormFields = () => {
+    setAddProduct(addProductHandler);
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;

@@ -125,7 +125,7 @@ export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
 
 export const addDocumentToExistingDocumentInFirebase = async (
-  productCategory = "hats",
+  productCategory,
   productToAdd
 ) => {
   // chech if the document exists in firebase already
@@ -141,6 +141,7 @@ export const addDocumentToExistingDocumentInFirebase = async (
 
     if (productToAdd.id) {
       await setDoc(doc(db, "categories", productCategory), {
+        // using the spread operator to uptate doc
         ...{
           ...data,
           items: items,
@@ -181,39 +182,45 @@ export const addDocumentToExistingDocumentInFirebase = async (
   // })
 };
 
-addDocumentToExistingDocumentInFirebase("fish", {
-  name: "oil and milk",
-  imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-  price: 25,
-});
-
 export const deleteDocumentToExistingDocumentInFirebase = async (
-  productCategory = "hats",
+  productCategory,
   productToDelete
   // product to delete is an object
 ) => {
-  // chech if the document exists in firebase already
+  // check if the document exists in firebase already
   const docRef = doc(db, "categories", productCategory);
   const document = await getDoc(docRef);
   // if yes
   if (document.exists()) {
     let data = document.data();
     let { items } = data;
-    let lengthOfData = items.length;
 
     // delete items and store in a variable
+    let index = items.findIndex((item) => {
+      let obj = item.name;
+      return obj === productToDelete.productName;
+    });
 
+    let newItems = index >= 0 ? items.splice(index, 1) : items;
+    console.log(index, "this is the index", items);
     // update items to that variable
+    updateDoc(docRef, {
+      items: items,
+    }).then(() => {
+      console.log("done updating");
+    });
   } else if (!document.exists()) {
     console.log("document does not exist");
   }
-
 
   // updateDoc(docRef, {
   //   title: 'hats'
   // }).then(() => {
   //   console.log('done updating')
   // })
-
- 
 };
+
+// deleteDocumentToExistingDocumentInFirebase("hats", {
+//   productName: "Brown Brim",
+//   productCategory: "Hats",
+// });
