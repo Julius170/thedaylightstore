@@ -3,9 +3,8 @@ import Banner from "../../components/banner/banner.component";
 import SmallBanner from "../../components/banner/smallBanner.component";
 import Features from "../../components/features/features.component";
 import Footer from "../../components/footer/footer.component";
-import Newsletter from "../../components/newsletter/newsletter.component";
+import HomeFeaturedProducts from "../../components/home-featured-product/homeFeaturedProduct";
 import Product from "../../components/products/product.component";
-import Product1 from "../../components/products/product1.component";
 
 const Home = () => {
   return (
@@ -19,10 +18,8 @@ const Home = () => {
           Shop Now
         </button>
       </section>
-      <Features />
-      <Product />
+      <HomeFeaturedProducts/>
       <Banner />
-      <Product1 />
       <SmallBanner />
     </Fragment>
   );

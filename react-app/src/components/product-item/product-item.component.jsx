@@ -9,7 +9,7 @@ function ProductItem({ group , product}) {
   const addProductToCart = () => addItemToCart(product)
   return (
     <div className="pro">
-      <img src={imageUrl} alt="" srcset="" style={{ width: "14rem" }} />
+      <img src={imageUrl} alt="" srcset="" style={{ width: "14rem", height: "20rem" }} />
 
       <div className="des">
         <span>{group}</span>
