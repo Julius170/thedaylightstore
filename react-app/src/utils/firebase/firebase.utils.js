@@ -128,7 +128,7 @@ export const addDocumentToExistingDocumentInFirebase = async (
   productCategory,
   productToAdd
 ) => {
-  // chech if the document exists in firebase already
+  // check if the document exists in firebase already
   const docRef = doc(db, "categories", productCategory);
   const document = await getDoc(docRef);
   // if yes
@@ -155,31 +155,7 @@ export const addDocumentToExistingDocumentInFirebase = async (
       title: productCategory,
     });
   }
-  // await console.log((await getDoc(docRef)).data() ,"test")
 
-  // get the data from the document
-  // update the array
-  // await setDoc(doc(db, "categories", "hats"), {
-  //   name: "Los Angeles",
-  //   state: "CA",
-  //   country: "USA"
-  // });
-
-  // if no
-  // setDoc(docRef,{
-  //  items: [push the object that wants to be added into this]
-  //   title: 'pig' (any title)
-  // })
-
-  // updateDoc(docRef, {
-  //   title: 'hats'
-  // }).then(() => {
-  //   console.log('done updating')
-  // })
-
-  // setDoc(docRef,{
-  //   title: 'pig'
-  // })
 };
 
 export const deleteDocumentToExistingDocumentInFirebase = async (
@@ -200,6 +176,7 @@ export const deleteDocumentToExistingDocumentInFirebase = async (
       let obj = item.name;
       return obj === productToDelete.productName;
     });
+    
 
     let newItems = index >= 0 ? items.splice(index, 1) : items;
     console.log(index, "this is the index", items);
@@ -213,11 +190,6 @@ export const deleteDocumentToExistingDocumentInFirebase = async (
     console.log("document does not exist");
   }
 
-  // updateDoc(docRef, {
-  //   title: 'hats'
-  // }).then(() => {
-  //   console.log('done updating')
-  // })
 };
 
 // deleteDocumentToExistingDocumentInFirebase("hats", {

@@ -2,9 +2,9 @@ import ProductItem from "../product-item/product-item.component";
 import { useContext } from "react";
 import { CategoriesContext } from "../../contexts/categories.context";
 
-const Product = () => {
+const Product = ({valueProp}) => {
   const { categoriesMap } = useContext(CategoriesContext);
-  console.log(categoriesMap, "this is it guys");
+  
 
   return (
     <section id="product1" className="section-p1">
@@ -13,13 +13,15 @@ const Product = () => {
       {Object.keys(categoriesMap).map((title) => {
         const products = categoriesMap[title];
         return (
-          products.map((x, i) => {
+          products.map((x) => {
             const { id } = x;
             
             return <ProductItem key={id} product={x} group={title} />;
           })
         );
       })}
+
+      
        
       </div>
     </section>
