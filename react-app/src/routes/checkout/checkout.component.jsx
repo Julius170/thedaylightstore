@@ -6,7 +6,8 @@ import CheckoutItem from "../../components/checkout-item/checkout-item.component
 
 import "./checkout.styles.scss";
 import { styleButton } from "../authentication/authentication.component";
-
+let res = ''
+let obj = {}
 const Checkout = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
 
@@ -29,11 +30,18 @@ const Checkout = () => {
           <span>Remove</span>
         </div>
       </div>
-      {cartItems.map((cartItem) => (
-        <CheckoutItem key={cartItem.id} cartItem={cartItem} />
-      ))}
+      {cartItems.map((cartItem) => {
+        const {name} = cartItem
+        if(!obj[name]){
+          obj[name] = name
+          res = res + ' *' + name
+        }
+        return <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+      }
+      )}
       <div className="total">TOTAL: ${cartTotal}</div>
-      <button
+      <a
+      href={`https://wa.me/+2349132681563?text=I want to purchase ${res}`}
         style={{
           ...styleButton,
           border: "none",
@@ -41,9 +49,10 @@ const Checkout = () => {
           margin: "2.3rem 0",
           borderRadius: "8px",
         }}
+       
       >
         Buy Now
-      </button>
+      </a>
     </div>
   );
 };

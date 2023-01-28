@@ -9,7 +9,7 @@ import Product from "../../components/products/product.component";
 const Home = () => {
   return (
     <Fragment>
-      <section id="hero" style={{ backgroundImage: 'url("https://i.ibb.co/ZYW3VTp/brown-brim.png")' }}>
+      <section id="hero" style={{ backgroundImage: 'url("./img/hero4.png")' }}>
         <h4>Trade-in-offer</h4>
         <h2>Supper value deals</h2>
         <h1>On all products</h1>
@@ -26,3 +26,5 @@ const Home = () => {
 };
 
 export default Home;
+
+

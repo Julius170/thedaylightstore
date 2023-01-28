@@ -1,15 +1,23 @@
 import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
-import './product-item.styles.scss'
+import "./product-item.styles.scss";
 
-function ProductItem({ group , product}) {
-  const {addItemToCart} = useContext(CartContext)
-  const {imageUrl, price, name} = product
-  const addProductToCart = () => addItemToCart(product)
+function ProductItem({ group, product }) {
+  const { setChangeSize, addItemToCart } = useContext(CartContext);
+  const { imageUrl, price, name } = product;
+  const addProductToCart = () => {
+    setChangeSize(true)
+    return addItemToCart(product);
+  };
   return (
     <div className="pro">
-      <img src={imageUrl} alt="" srcset="" style={{ width: "14rem", height: "20rem" }} />
+      <img
+        src={imageUrl}
+        alt=""
+        srcset=""
+        style={{ width: "14rem", height: "20rem" }}
+      />
 
       <div className="des">
         <span>{group}</span>
