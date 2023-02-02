@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../../components/button/button.component";
 import FormInput from "../../components/login/form-input/form-input.component";
+import UploadWidget from "../../utils/cloudinary/UploadWidget";
 import { addDocumentToExistingDocumentInFirebase } from "../../utils/firebase/firebase.utils";
 import { styleButton } from "../authentication/authentication.component";
 
@@ -55,9 +56,11 @@ function Addfile() {
           type="text"
           required
           onChange={handleChange}
+
           name="productImage"
           value={productImage}
         />
+        <UploadWidget/>
 
         <FormInput
           label="productPrice"
