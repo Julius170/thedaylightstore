@@ -10,6 +10,7 @@ const Product = ({ valueProp }) => {
       <div className="pro-container">
         {Object.keys(categoriesMap).map((title) => {
           const products = categoriesMap[title];
+          // Filter with data in "valueProp"
           return products
             .filter((x) => {
               return x.name
