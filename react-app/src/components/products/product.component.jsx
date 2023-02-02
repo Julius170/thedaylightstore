@@ -13,9 +13,8 @@ const Product = ({ valueProp }) => {
           // Filter with data in "valueProp"
           return products
             .filter((x) => {
-              return x.name
-                .toLocaleLowerCase()
-                .includes(valueProp.toLocaleLowerCase());
+              return x.productName?.toLocaleLowerCase()
+                .includes(valueProp?.toLocaleLowerCase());
             })
             .map((x) => {
               const { id } = x;

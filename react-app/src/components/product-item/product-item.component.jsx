@@ -6,6 +6,7 @@ import "./product-item.styles.scss";
 function ProductItem({ group, product }) {
   const { setChangeSize, addItemToCart } = useContext(CartContext);
   const { imageUrl, price, name } = product;
+  const { productImage, productName, productPrice, groupName } = product;
   const addProductToCart = () => {
     setChangeSize(true)
     return addItemToCart(product);
@@ -13,15 +14,15 @@ function ProductItem({ group, product }) {
   return (
     <div className="pro">
       <img
-        src={imageUrl}
+        src={productImage}
         alt=""
         srcset=""
         style={{ width: "14rem", height: "20rem" }}
       />
 
       <div className="des">
-        <span>{group}</span>
-        <h5>{name}</h5>
+        <span>{groupName}</span>
+        <h5>{productName}</h5>
         <div className="star">
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
@@ -29,7 +30,7 @@ function ProductItem({ group, product }) {
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
         </div>
-        <h4>${price}</h4>
+        <h4>${productPrice}</h4>
       </div>
 
       <div className="cart" onClick={addProductToCart}>

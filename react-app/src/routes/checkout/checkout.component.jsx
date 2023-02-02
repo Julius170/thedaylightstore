@@ -31,10 +31,10 @@ const Checkout = () => {
         </div>
       </div>
       {cartItems.map((cartItem) => {
-        const {name} = cartItem
-        if(!obj[name]){
-          obj[name] = name
-          res = res + ' *' + name
+        const {productName} = cartItem
+        if(!obj[productName]){
+          obj[productName] = productName
+          res = res + ' *' + productName
         }
         return <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       }

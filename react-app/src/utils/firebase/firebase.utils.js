@@ -173,7 +173,7 @@ export const deleteDocumentToExistingDocumentInFirebase = async (
 
     // delete items and store in a variable
     let index = items.findIndex((item) => {
-      let obj = item.name;
+      let obj = item.productName;
       return obj === productToDelete.productName;
     });
     

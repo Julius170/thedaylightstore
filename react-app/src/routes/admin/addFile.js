@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "../../components/button/button.component";
 import FormInput from "../../components/login/form-input/form-input.component";
+import { ImageContext } from "../../contexts/image.context";
 import UploadWidget from "../../utils/cloudinary/UploadWidget";
 import { addDocumentToExistingDocumentInFirebase } from "../../utils/firebase/firebase.utils";
 import { styleButton } from "../authentication/authentication.component";
@@ -15,6 +16,7 @@ const addProductHandler = {
 function Addfile() {
   const [addProduct, setAddProduct] = useState(addProductHandler);
   const { productName, productImage, productPrice, groupName } = addProduct;
+  const {imageUrl} = useContext(ImageContext)
   const resetFormFields = () => {
     setAddProduct(addProductHandler);
   };
@@ -24,11 +26,11 @@ function Addfile() {
 
     setAddProduct((prev) => ({ ...prev, [name]: value }));
     console.log(addProduct);
+
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     try {
       await addDocumentToExistingDocumentInFirebase(groupName, addProduct);
       resetFormFields();
@@ -36,6 +38,10 @@ function Addfile() {
       console.log("file creation in failed", error);
     }
   };
+  // using the use effect hook to set the img url when a response is gotten from cloudinary
+  useEffect(() => {
+    setAddProduct((prev) => ({...prev, productImage: imageUrl}))
+  },[imageUrl])
 
   return (
     <div className="add-product-to-cart">
@@ -61,6 +67,7 @@ function Addfile() {
           value={productImage}
         />
         <UploadWidget/>
+
 
         <FormInput
           label="productPrice"

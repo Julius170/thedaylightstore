@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const ImageContext = createContext({
+export const ImageContext = createContext({
     imageUrl: '',
     setImageUrl: () => {}
 })

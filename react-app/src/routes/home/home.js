@@ -10,10 +10,10 @@ const Home = () => {
   return (
     <Fragment>
       <section id="hero" style={{ backgroundImage: 'url("./img/hero4.png")' }}>
-        <h4>Trade-in-offer</h4>
-        <h2>Supper value deals</h2>
+        <h4>Passion-for-style </h4>
+        <h2>Shop Now</h2>
         <h1>On all products</h1>
-        <p>Save more with coupons & up to 70% off!</p>
+        <p>Welcome to Fashion Haven, your one-stop-shop for all things fashion.</p>
         <button style={{ backgroundImage: 'url("./img/button.png")' }}>
           Shop Now
         </button>
