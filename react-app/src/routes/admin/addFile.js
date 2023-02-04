@@ -32,6 +32,8 @@ function Addfile() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      setAddProduct((prev) => ({...prev, productImage: imageUrl}))
+      console.log(addProduct, 'This means it actualy worked')
       await addDocumentToExistingDocumentInFirebase(groupName, addProduct);
       resetFormFields();
     } catch (error) {
