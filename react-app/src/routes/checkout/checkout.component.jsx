@@ -48,6 +48,7 @@ const Checkout = () => {
           padding: "1rem",
           margin: "2.3rem 0",
           borderRadius: "8px",
+          listStyleType: 'none'
         }}
        
       >

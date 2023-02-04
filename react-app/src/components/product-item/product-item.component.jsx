@@ -16,7 +16,7 @@ function ProductItem({ group, product }) {
       <img
         src={productImage}
         alt=""
-        srcset=""
+        
         style={{ width: "14rem", height: "20rem" }}
       />
 

@@ -25,7 +25,7 @@ const CartDropdown = () => {
           <span className='empty-message'>Your cart is empty</span>
         )}
       </div>
-      <button onClick={goToCheckout} style={{...styleButton, border: 'none', padding: '1rem', borderRadius: '8px'}}>GO TO CHECKOUT</button>
+      <button onClick={goToCheckout} style={{...styleButton, border: 'none', padding: '1rem', borderRadius: '8px', cursor: 'pointer'}}>GO TO CHECKOUT</button>
     </div>
   );
 };
