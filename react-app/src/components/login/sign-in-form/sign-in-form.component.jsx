@@ -7,6 +7,8 @@ import {
 } from "../../../utils/firebase/firebase.utils";
 import "./sign-in-form.styles.scss";
 
+import { useNavigate } from 'react-router-dom';
+
 import Button from "@mui/material/Button";
 
 
@@ -20,21 +22,33 @@ const defaultFormFields = {
 const SignInForm = ({ styleButton }) => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
+  const navigate = useNavigate()
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
   const signInWithGoogle = async () => {
-    await signInWithGooglePopup();
+    const res = await signInWithGooglePopup();
+    resetFormFields();
+    console.log(res.user.email, "this is the google res")
+    if(res.user.email === "kinyichukwuose@gmail.com"){
+      // checking if user is the admin 
+      navigate('/xthjufrhdgcwi7gqchgyuwcfyhigy')
+    }else{
+      // routing other users to shop page
+      navigate('/shop')
+    }
+    
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      await signInAuthUserWithEmailAndPassword(email, password);
+      const res = await signInAuthUserWithEmailAndPassword(email, password);
       resetFormFields();
+      navigate('/shop')
     } catch (error) {
       console.log("user sign in failed", error);
     }

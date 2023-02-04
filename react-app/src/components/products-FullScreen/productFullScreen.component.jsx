@@ -7,13 +7,13 @@ const ProductFullScreen = () => {
   console.log(categoriesMap, "this is it guys");
 
   return (
-    <section id="prodetails" class="section-p1">
-        <div class="single-pro-image">
+    <section id="prodetails" className="section-p1">
+        <div className="single-pro-image">
             <img src="img/products/f1.jpg" width="100%" id="MainImg" alt=""/>
             
         </div>
 
-        <div class="single-pro-details">
+        <div className="single-pro-details">
             <h6>Home / T-shirt</h6>
             <h4>Men's Fashion T shirt</h4>
             <h2>$139.00</h2>
@@ -27,7 +27,7 @@ const ProductFullScreen = () => {
             </select>
 
             <input type="number" value="1"/>
-            <button class="normal">Add to Cart</button>
+            <button className="normal">Add to Cart</button>
 
         </div>
     </section>

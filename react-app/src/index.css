@@ -130,6 +130,7 @@
     bottom: -4px;
     left: 1.3rem;
   }
+
   #header__navbar li a:hover {
     color: #088178;
   }
@@ -189,7 +190,6 @@
   #hero h4 {
     font-size: 1.85rem;
   }
-  
 }
 button.normal {
   font-size: 0.9rem;
@@ -202,7 +202,7 @@ button.normal {
   border: none;
   outline: none;
 }
-button.normal:active{
+button.normal:active {
   transform: scale(1.03);
 }
 button.white {
@@ -496,7 +496,6 @@ body {
   position: absolute;
   bottom: 1.3rem;
   right: 0.67rem;
-
 }
 #product1 .pro .des {
   text-align: start;
@@ -806,14 +805,15 @@ footer .follow .follow i:hover {
   }
 } /*# sourceMappingURL=main.css.map */
 
-footer{
+footer {
   background-color: #07645e;
- 
 }
 
-footer div.col a, footer div.col h4, footer div.col p{
+footer div.col a,
+footer div.col h4,
+footer div.col p {
   background-color: #07645e;
   color: white !important;
 }
 
-  
+

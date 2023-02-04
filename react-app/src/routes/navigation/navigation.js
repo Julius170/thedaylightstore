@@ -23,16 +23,16 @@ const Navigation = () => {
         </Link>
 
         <div>
-          <ul id="header__navbar" class={openNavbar}>
-            <li class="navbar_links">
-              <Link to="/" class="active">
+          <ul id="header__navbar" className={openNavbar}>
+            <li className="navbar_links">
+              <Link to="/" className="active">
                 Home
               </Link>
             </li>
-            <li class="navbar_links">
+            <li className="navbar_links">
               <Link to="/shop">shop</Link>
             </li>
-            <li class="navbar_links">
+            <li className="navbar_links">
               <Link to="/login">
                 {currentUser ? (
                   <span onClick={signOutUser}>logout</span>
@@ -42,12 +42,12 @@ const Navigation = () => {
               </Link>
             </li>
 
-            <li class="navbar_links">
+            <li className="navbar_links">
               <Link to="">contact</Link>
             </li>
             <li>
               <Link>
-                {false && <i class="fa-sharp fa-solid fa-cart-shopping"></i>}
+                {false && <i className="fa-sharp fa-solid fa-cart-shopping"></i>}
                 <CartIcon />
               </Link>
             </li>
@@ -55,8 +55,11 @@ const Navigation = () => {
         </div>
 
         <div id="mobile">
-          <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-          <i id="bar" class="fa-solid fa-bars" onClick={toggleNavbar}></i>
+          <Link>
+            {false && <i className="fa-sharp fa-solid fa-cart-shopping" ></i>}
+            <CartIcon />
+          </Link>
+          <i id="bar" className="fa-solid fa-bars"  onClick={toggleNavbar}></i>
         </div>
       </section>
       <CartDropdown />

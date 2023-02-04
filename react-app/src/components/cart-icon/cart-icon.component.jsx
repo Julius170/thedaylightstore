@@ -15,7 +15,7 @@ const CartIcon = () => {
   return (
     <div className='cart-icon-container cart' onClick={toggleIsCartOpen}>
       <ShoppingIcon style={changeSize ? {transform: 'scale(1.5)', transition: '.3s'}:{}}  className='shopping-icon' />
-      <span className='item-count'>{cartCount}</span>
+      <span className='item-count' style={{color:'black'}}>{cartCount}</span>
     </div>
   );
 };

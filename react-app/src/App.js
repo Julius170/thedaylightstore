@@ -19,7 +19,7 @@ function App() {
           <Route path="shop" element={<Shop />} />
           <Route path="login" element={<Authentication />} />
           <Route path="checkout" element={<Checkout />} />
-          <Route path="admin" element={<Admin />} />
+          <Route path="xthjufrhdgcwi7gqchgyuwcfyhigy" element={<Admin />} />
         </Route>
       </Routes>
     </div>

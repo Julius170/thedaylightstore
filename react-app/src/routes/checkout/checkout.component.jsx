@@ -39,7 +39,7 @@ const Checkout = () => {
         return <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       }
       )}
-      <div className="total">TOTAL: ${cartTotal}</div>
+      <div className="total">TOTAL: ₦ {cartTotal}</div>
       <a
       href={`https://wa.me/+2349132681563?text=I want to purchase ${res}`}
         style={{

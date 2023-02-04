@@ -1,14 +1,21 @@
-
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const navigate = useNavigate();
   return (
-    <section id="banner" class="section-m1" style={{backgroundImage: ` url("./img/banner/b1.jpg")`}}>
-      <h4>Repair Services</h4>
+    <section
+      id="banner"
+      className="section-m1"
+      style={{ backgroundImage: ` url("./img/banner/b1.jpg")` }}
+    >
+      <h4> Promo</h4>
       <h2>
-        Up to <span>70% Off</span> - All t-shirt & Accessories
+        Up to <span>30% Off</span> - All Clothes
       </h2>
-      <button class="normal">Explore More</button>
+      <button className="normal" onClick={() => navigate("/shop")}>
+        Explore More
+      </button>
     </section>
   );
 };
-export default Banner
+export default Banner;

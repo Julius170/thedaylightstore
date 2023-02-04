@@ -30,11 +30,11 @@ function ProductItem({ group, product }) {
           <i className="fas fa-star"></i>
           <i className="fas fa-star"></i>
         </div>
-        <h4>${productPrice}</h4>
+        <h4>₦ {productPrice}</h4>
       </div>
 
       <div className="cart" onClick={addProductToCart}>
-        <i class="fa-sharp fa-solid fa-cart-shopping "></i>
+        <i className="fa-sharp fa-solid fa-cart-shopping "></i>
       </div>
     </div>
   );

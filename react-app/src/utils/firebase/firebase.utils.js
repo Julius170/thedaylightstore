@@ -128,33 +128,36 @@ export const addDocumentToExistingDocumentInFirebase = async (
   productCategory,
   productToAdd
 ) => {
-  // check if the document exists in firebase already
-  const docRef = doc(db, "categories", productCategory);
-  const document = await getDoc(docRef);
-  // if yes
-  if (document.exists()) {
-    let data = document.data();
-    let { items } = data;
-    let lengthOfData = items.length;
-    productToAdd["id"] = lengthOfData;
-    items.push(productToAdd);
+  if(productCategory && productToAdd){
+ // check if the document exists in firebase already
+ const docRef = doc(db, "categories", productCategory);
+ const document = await getDoc(docRef);
+ // if yes
+ if (document.exists()) {
+   let data = document.data();
+   let { items } = data;
+   let lengthOfData = items.length;
+   productToAdd["id"] = lengthOfData;
+   items.push(productToAdd);
 
-    if (productToAdd.id) {
-      await setDoc(doc(db, "categories", productCategory), {
-        // using the spread operator to uptate doc
-        ...{
-          ...data,
-          items: items,
-        },
-        title: productCategory,
-      });
-    }
-  } else if (!document.exists()) {
-    await setDoc(doc(db, "categories", productCategory), {
-      items: [{ ...productToAdd, id: 1 }],
-      title: productCategory,
-    });
+   if (productToAdd.id) {
+     await setDoc(doc(db, "categories", productCategory), {
+       // using the spread operator to uptate doc
+       ...{
+         ...data,
+         items: items,
+       },
+       title: productCategory,
+     });
+   }
+ } else if (!document.exists()) {
+   await setDoc(doc(db, "categories", productCategory), {
+     items: [{ ...productToAdd, id: 1 }],
+     title: productCategory,
+   });
+ }
   }
+ 
 
 };
 

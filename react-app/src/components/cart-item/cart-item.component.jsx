@@ -9,7 +9,7 @@ const CartItem = ({ cartItem }) => {
       <div className='item-details'>
         <span className='name'>{productName}</span>
         <span className='price'>
-          {quantity} x ${productPrice}
+          {quantity} x ₦{productPrice}
         </span>
       </div>
     </div>
