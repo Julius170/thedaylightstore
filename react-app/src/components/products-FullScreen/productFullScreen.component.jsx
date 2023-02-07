@@ -1,4 +1,4 @@
-import ProductItem from "../product-item/product-item.component";
+
 import { useContext } from "react";
 import { CategoriesContext } from "../../contexts/categories.context";
 
