@@ -9,7 +9,6 @@ import Shop from "./routes/shop/shop";
 import { addDocumentToExistingDocumentInFirebase } from "./utils/firebase/firebase.utils";
 
 function App() {
-  // tryAndAddADocument()
 
   return (
     <div className="App">
