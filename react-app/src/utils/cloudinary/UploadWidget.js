@@ -15,16 +15,16 @@ function UploadWidget() {
         uploadPreset: "ffgl8puy",
       },
       (error, result) => {
-        // get the url from the cloudinary api response
+        
         console.log(result.event, 'this is the result');
         if(result.event === "success"){
             console.log(result.info.url, 'we got the url')
-            // use useContext to set the img url
+          
             setImageUrl(result.info.url)
         }
       }
     );
-    // console.log(cloudinaryRef.current, "checking return value");
+   
   }, []);
   return (
     <Button onClick={() => widgetRef.current.open()} style={{...styleButton, backgroundColor: 'black'}}> Upload Image</Button>

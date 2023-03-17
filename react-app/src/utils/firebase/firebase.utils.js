@@ -195,7 +195,4 @@ export const deleteDocumentToExistingDocumentInFirebase = async (
 
 };
 
-// deleteDocumentToExistingDocumentInFirebase("hats", {
-//   productName: "Brown Brim",
-//   productCategory: "Hats",
-// });
+
