@@ -15,7 +15,7 @@ const Checkout = () => {
   const [provider, setProvider] = useState(null);
   const [kit, setKit] = useState(null);
   const [someAddress, setSomeAddress] = useState(
-    "0x5038ae19CDf0B623e6e8015249ecF58A1165D653"
+    "0x9596d284619bbc628bef87333c20f0d78fee5a1b"
   );
 
   const connect = async () => {
