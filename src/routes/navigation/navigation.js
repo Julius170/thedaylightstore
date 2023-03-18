@@ -19,7 +19,7 @@ const Navigation = () => {
     <>
       <section id="header">
         <Link to="/" id="header__logo">
-          DL<span>S.</span>
+          L<span>S</span>
         </Link>
 
         <div>

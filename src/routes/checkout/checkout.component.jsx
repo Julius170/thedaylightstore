@@ -129,19 +129,19 @@ const Checkout = () => {
     <div className="checkout-container">
       <div className="checkout-header">
         <div className="header-block">
-          <span>Product</span>
+          <span>Prod.</span>
         </div>
         <div className="header-block">
-          <span>Description</span>
+          <span>Desc.</span>
         </div>
         <div className="header-block">
-          <span>Quantity</span>
+          <span>Qnt.</span>
         </div>
         <div className="header-block">
-          <span>Price</span>
+          <span>Prc.</span>
         </div>
         <div className="header-block">
-          <span>Remove</span>
+          <span>Rm.</span>
         </div>
       </div>
       {cartItems.map((cartItem) => {
@@ -152,7 +152,7 @@ const Checkout = () => {
         }
         return <CheckoutItem key={cartItem.id} cartItem={cartItem} />;
       })}
-      <div className="total">TOTAL: ₦ {cartTotal}</div>
+      <div className="total">TOTAL: $ {cartTotal}</div>
 
     
 

@@ -20,7 +20,7 @@ const Home = () => {
         <h2 style={whiteColor}>Shop Now</h2>
         <h1>On all products</h1>
         <p style={whiteColor}>
-          Welcome to The Daylight Store, your one-stop-shop for all things fashion.
+          Welcome to your one-stop-shop for all things fashion.
         </p>
         <button
           style={{ backgroundImage: 'url("./img/button.png")' }}
